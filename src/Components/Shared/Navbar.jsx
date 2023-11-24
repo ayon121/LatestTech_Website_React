@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { GiTechnoHeart } from "react-icons/gi";
 
 const Navbar = () => {
@@ -32,7 +32,8 @@ const Navbar = () => {
                 </div>
                 
                 <div className="navbar-end">
-                    <a className="btn text-[#FF444A]">Login</a>
+                    <Link to='/login'><button className="btn text-[#FF444A]">Login</button></Link>
+                   
                 </div>
             </div>
         </div>

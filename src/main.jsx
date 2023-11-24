@@ -11,6 +11,7 @@ import Root from './Components/Layout/Root';
 import Home from './Components/Pages/Home/Home';
 import Error from './Components/Pages/Error/Error';
 import Products from './Components/Pages/Products/Products';
+import Login from './Components/Pages/Login/Login';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path : '/allproducts',
         element : <Products></Products>
+      },
+      {
+        path : '/login',
+        element : <Login></Login>
       }
     ]
 
