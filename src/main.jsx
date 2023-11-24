@@ -13,6 +13,7 @@ import Error from './Components/Pages/Error/Error';
 import Products from './Components/Pages/Products/Products';
 import Login from './Components/Pages/Login/Login';
 import Register from './Components/Pages/Register/Register';
+import AddProduct from './Components/Pages/AddProduct/AddProduct';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path : '/register',
         element : <Register></Register>
+      },
+      {
+        path : '/addproduct',
+        element : <AddProduct></AddProduct>
       }
     ]
 

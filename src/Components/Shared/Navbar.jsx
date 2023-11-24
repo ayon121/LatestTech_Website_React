@@ -5,10 +5,9 @@ const Navbar = () => {
     const navlinks = <>
          <NavLink to="/" className={({ isActive }) => isActive ? 'text-lg font-bold text-[#FF444A]' : 'text-lg bg-transparent text-[#f8f5f5]'}>Home</NavLink>
         <li><NavLink   className={({ isActive }) => isActive ? 'text-lg font-bold text-[#FF444A]' : 'text-lg bg-transparent text-[#f8f5f5]'} to="/allproducts" >All Products</NavLink></li>
-        <li><NavLink  className={({ isActive }) => isActive ? 'text-lg font-bold text-[#FF444A]' : 'text-lg bg-transparent text-[#f8f5f5]'} to="/career">Career</NavLink></li>
+        <li><NavLink  className={({ isActive }) => isActive ? 'text-lg font-bold text-[#FF444A]' : 'text-lg bg-transparent text-[#f8f5f5]'} to="/addproduct">Add Product</NavLink></li>
 
     </>
-
     return (
         <div className=" bg-[#231f20] font-inter ">
             <div className="navbar max-w-6xl  mx-auto">
