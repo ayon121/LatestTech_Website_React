@@ -10,6 +10,7 @@ import {
 import Root from './Components/Layout/Root';
 import Home from './Components/Pages/Home/Home';
 import Error from './Components/Pages/Error/Error';
+import Products from './Components/Pages/Products/Products';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path : '/',
         element : <Home> </Home>
+      },
+      {
+        path : '/allproducts',
+        element : <Products></Products>
       }
     ]
 

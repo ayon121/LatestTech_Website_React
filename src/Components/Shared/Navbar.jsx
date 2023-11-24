@@ -4,7 +4,7 @@ import { GiTechnoHeart } from "react-icons/gi";
 const Navbar = () => {
     const navlinks = <>
          <NavLink to="/" className={({ isActive }) => isActive ? 'text-lg font-bold text-[#FF444A]' : 'text-lg bg-transparent text-[#f8f5f5]'}>Home</NavLink>
-        <li><NavLink  className={({ isActive }) => isActive ? 'text-lg font-bold text-[#FF444A]' : 'text-lg bg-transparent text-[#f8f5f5]'} to="/about" >About</NavLink></li>
+        <li><NavLink   className={({ isActive }) => isActive ? 'text-lg font-bold text-[#FF444A]' : 'text-lg bg-transparent text-[#f8f5f5]'} to="/allproducts" >All Products</NavLink></li>
         <li><NavLink  className={({ isActive }) => isActive ? 'text-lg font-bold text-[#FF444A]' : 'text-lg bg-transparent text-[#f8f5f5]'} to="/career">Career</NavLink></li>
 
     </>
@@ -23,7 +23,7 @@ const Navbar = () => {
 
                     </div>
                     <a className="btn btn-ghost lg:text-2xl  flex items-center text-[#fcfbfb]"><span className="text-[#FF444A]"><GiTechnoHeart /></span>TechVibe </a>
-                    <div className="navbar-start hidden lg:flex">
+                    <div className=" hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 items-center">
                         {navlinks}
 
