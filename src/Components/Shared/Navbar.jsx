@@ -3,14 +3,15 @@ import { GiTechnoHeart } from "react-icons/gi";
 
 const Navbar = () => {
     const navlinks = <>
-         <NavLink to="/" className={({ isActive }) => isActive ? 'text-lg font-bold text-[#FF444A]' : 'text-lg bg-transparent text-[#f8f5f5]'}>Home</NavLink>
-        <li><NavLink   className={({ isActive }) => isActive ? 'text-lg font-bold text-[#FF444A]' : 'text-lg bg-transparent text-[#f8f5f5]'} to="/allproducts" >All Products</NavLink></li>
-        <li><NavLink  className={({ isActive }) => isActive ? 'text-lg font-bold text-[#FF444A]' : 'text-lg bg-transparent text-[#f8f5f5]'} to="/addproduct">Add Product</NavLink></li>
+         <NavLink to="/" className={({ isActive }) => isActive ? 'text-sm font-bold text-[#FF444A]' : 'text-sm bg-transparent text-[#f8f5f5]'}>Home</NavLink>
+        <li><NavLink   className={({ isActive }) => isActive ? 'text-sm  font-bold text-[#FF444A]' : 'text-sm  bg-transparent text-[#f8f5f5]'} to="/allproducts" >All Products</NavLink></li>
+        <li><NavLink  className={({ isActive }) => isActive ? 'text-sm  font-bold text-[#FF444A]' : 'text-sm  bg-transparent text-[#f8f5f5]'} to="/addproduct">Add Product</NavLink></li>
+        <li><NavLink  className={({ isActive }) => isActive ? 'text-sm  font-bold text-[#FF444A]' : 'text-sm  bg-transparent text-[#f8f5f5]'} to="/myproducts">My Products</NavLink></li>
 
     </>
     return (
         <div className=" bg-[#231f20] font-inter ">
-            <div className="navbar max-w-6xl  mx-auto">
+            <div className="navbar max-w-7xl  mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">

@@ -14,6 +14,8 @@ import Products from './Components/Pages/Products/Products';
 import Login from './Components/Pages/Login/Login';
 import Register from './Components/Pages/Register/Register';
 import AddProduct from './Components/Pages/AddProduct/AddProduct';
+import MyProduct from './Components/Pages/MyProducts/MyProduct';
+import MyProducts from './Components/Pages/MyProducts/MyProducts';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +42,10 @@ const router = createBrowserRouter([
       {
         path : '/addproduct',
         element : <AddProduct></AddProduct>
+      },
+      {
+        path : '/myproducts',
+        element : <MyProducts></MyProducts>
       }
     ]
 
