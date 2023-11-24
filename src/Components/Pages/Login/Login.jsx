@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import Title from '../../Shared/Title';
 import { FcGoogle } from "react-icons/fc";
 
@@ -22,9 +23,10 @@ const Login = () => {
                         <input type="password" placeholder="Type your password" className="input input-bordered input-error w-full max-w-xs my-2"  required/><br />
                         <button className="btn text-[#FF444A] border-[#FF444A]">Login</button>
                     </div>
-                    <div>
-                        <h1 className='py-2 text-[#FF444A] text-sm'>Do not have a account</h1>
-                        <button className="btn btn-sm text-[#FF444A] border-[#FF444A]">Register</button>
+                    <div> 
+                        <h1 className='py-2 text-[#FF444A] text-sm'>Do not have an account ?</h1>
+                        <Link to="/register"><button className="btn btn-sm text-[#FF444A] border-[#FF444A]">Register</button></Link>
+                        
 
 
                     </div>
