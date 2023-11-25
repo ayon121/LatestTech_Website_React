@@ -14,38 +14,45 @@ import Products from './Components/Pages/Products/Products';
 import Login from './Components/Pages/Login/Login';
 import Register from './Components/Pages/Register/Register';
 import AddProduct from './Components/Pages/AddProduct/AddProduct';
-import MyProduct from './Components/Pages/MyProducts/MyProduct';
+// import MyProduct from './Components/Pages/MyProducts/MyProduct';
 import MyProducts from './Components/Pages/MyProducts/MyProducts';
+import {
+  QueryClient,
+  QueryClientProvider,
+  
+} from '@tanstack/react-query'
+
+const queryClient = new QueryClient()
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root></Root> ,
-    errorElement : <Error></Error>,
-    children : [
+    element: <Root></Root>,
+    errorElement: <Error></Error>,
+    children: [
       {
-        path : '/',
-        element : <Home> </Home>
+        path: '/',
+        element: <Home> </Home>
       },
       {
-        path : '/allproducts',
-        element : <Products></Products>
+        path: '/allproducts',
+        element: <Products></Products>
       },
       {
-        path : '/login',
-        element : <Login></Login>
+        path: '/login',
+        element: <Login></Login>
       },
       {
-        path : '/register',
-        element : <Register></Register>
+        path: '/register',
+        element: <Register></Register>
       },
       {
-        path : '/addproduct',
-        element : <AddProduct></AddProduct>
+        path: '/addproduct',
+        element: <AddProduct></AddProduct>
       },
       {
-        path : '/myproducts',
-        element : <MyProducts></MyProducts>
+        path: '/myproducts',
+        element: <MyProducts></MyProducts>
       }
     ]
 
@@ -54,6 +61,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
+
   </React.StrictMode>,
 )
