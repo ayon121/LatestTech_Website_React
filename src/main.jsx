@@ -10,7 +10,7 @@ import {
 import Root from './Components/Layout/Root';
 import Home from './Components/Pages/Home/Home';
 import Error from './Components/Pages/Error/Error';
-import Products from './Components/Pages/Products/Products';
+
 import Login from './Components/Pages/Login/Login';
 import Register from './Components/Pages/Register/Register';
 import AddProduct from './Components/Pages/AddProduct/AddProduct';
@@ -21,6 +21,7 @@ import {
   QueryClientProvider,
   
 } from '@tanstack/react-query'
+import AllProducts from './Components/Pages/AllProducts/AllProducts';
 
 const queryClient = new QueryClient()
 
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/allproducts',
-        element: <Products></Products>
+        element: <AllProducts></AllProducts>
       },
       {
         path: '/login',

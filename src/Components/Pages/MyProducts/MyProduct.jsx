@@ -2,6 +2,7 @@
 // import PropTypes from 'prop-types';
 
 const MyProduct = ()=> {
+    
     return (
         <div className="card card-compact w-auto border-2 border-[#FF444A] bg-base-100 shadow-xl font-inter">
             <div className="card-body">
