@@ -10,7 +10,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
-    const { createUser , GoogleLogin} = useContext(AuthContext)
+    const { createUser , GoogleLogin , UpdateProfile} = useContext(AuthContext)
     const navigate = useNavigate()
     const handleRegister = e => {
         e.preventDefault()
@@ -18,13 +18,21 @@ const Register = () => {
         const email = form.get('email')
         const password = form.get('password')
         const name = form.get('name')
-        const img = form.get('img')
+        const imgurl = form.get('img')
 
-        console.log(name , img);
+        console.log(name , imgurl);
         // create user
         createUser(email , password)
         .then(result => {
             console.log(result)
+            UpdateProfile(name , imgurl)
+            .then(result => {
+                console.log(result)
+            })
+            .catch(error => {
+                toast(error.message)
+            })
+            toast("Login Success")
             navigate('/')
             
         })
