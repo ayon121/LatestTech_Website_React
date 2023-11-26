@@ -25,6 +25,7 @@ import AllProducts from './Components/Pages/AllProducts/AllProducts';
 import Authproviders from './Providers/Authproviders';
 import Layout from './Components/Pages/Dashboard/Layout';
 import Dashboard from './Components/Pages/Dashboard/Dashboard';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 const queryClient = new QueryClient()
 
@@ -66,7 +67,7 @@ const router = createBrowserRouter([
     children  : [
       {
         path : '/dashboard' , 
-        element : <Dashboard></Dashboard>
+        element : <PrivateRoute> <Dashboard></Dashboard></PrivateRoute>
       }
     ]
   }
