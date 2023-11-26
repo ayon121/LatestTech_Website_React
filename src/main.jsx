@@ -23,6 +23,8 @@ import {
 } from '@tanstack/react-query'
 import AllProducts from './Components/Pages/AllProducts/AllProducts';
 import Authproviders from './Providers/Authproviders';
+import Layout from './Components/Pages/Dashboard/Layout';
+import Dashboard from './Components/Pages/Dashboard/Dashboard';
 
 const queryClient = new QueryClient()
 
@@ -57,8 +59,17 @@ const router = createBrowserRouter([
         element: <MyProducts></MyProducts>
       }
     ]
-
   },
+  {
+    path : '/dashboard' ,
+    element : <Layout></Layout>,
+    children  : [
+      {
+        path : '/dashboard' , 
+        element : <Dashboard></Dashboard>
+      }
+    ]
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
