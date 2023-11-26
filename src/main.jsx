@@ -19,9 +19,10 @@ import MyProducts from './Components/Pages/MyProducts/MyProducts';
 import {
   QueryClient,
   QueryClientProvider,
-  
+
 } from '@tanstack/react-query'
 import AllProducts from './Components/Pages/AllProducts/AllProducts';
+import Authproviders from './Providers/Authproviders';
 
 const queryClient = new QueryClient()
 
@@ -62,9 +63,13 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
-    </QueryClientProvider>
+    <Authproviders>
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
+
+    </Authproviders>
+
 
   </React.StrictMode>,
 )

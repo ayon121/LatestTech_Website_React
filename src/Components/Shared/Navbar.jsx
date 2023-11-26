@@ -1,12 +1,22 @@
 import { Link, NavLink } from "react-router-dom";
 import { GiTechnoHeart } from "react-icons/gi";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/Authproviders";
 
 const Navbar = () => {
+
+    const { user, logout } = useContext(AuthContext)
+    const handlelogOut = () => {
+        logout()
+            .then()
+            .catch()
+    }
+
     const navlinks = <>
-         <NavLink to="/" className={({ isActive }) => isActive ? 'text-sm font-bold text-[#FF444A]' : 'text-sm bg-transparent text-[#f8f5f5]'}>Home</NavLink>
-        <li><NavLink   className={({ isActive }) => isActive ? 'text-sm  font-bold text-[#FF444A]' : 'text-sm  bg-transparent text-[#f8f5f5]'} to="/allproducts" >All Products</NavLink></li>
-        <li><NavLink  className={({ isActive }) => isActive ? 'text-sm  font-bold text-[#FF444A]' : 'text-sm  bg-transparent text-[#f8f5f5]'} to="/addproduct">Add Product</NavLink></li>
-        <li><NavLink  className={({ isActive }) => isActive ? 'text-sm  font-bold text-[#FF444A]' : 'text-sm  bg-transparent text-[#f8f5f5]'} to="/myproducts">My Products</NavLink></li>
+        <li><NavLink to="/" className={({ isActive }) => isActive ? 'text-sm font-bold text-[#FF444A]' : 'text-sm bg-transparent text-[#f8f5f5]'}>Home</NavLink></li>
+        <li><NavLink className={({ isActive }) => isActive ? 'text-sm  font-bold text-[#FF444A]' : 'text-sm  bg-transparent text-[#f8f5f5]'} to="/allproducts" >All Products</NavLink></li>
+        <li><NavLink className={({ isActive }) => isActive ? 'text-sm  font-bold text-[#FF444A]' : 'text-sm  bg-transparent text-[#f8f5f5]'} to="/addproduct">Add Product</NavLink></li>
+        <li><NavLink className={({ isActive }) => isActive ? 'text-sm  font-bold text-[#FF444A]' : 'text-sm  bg-transparent text-[#f8f5f5]'} to="/myproducts">My Products</NavLink></li>
 
     </>
     return (
@@ -23,17 +33,23 @@ const Navbar = () => {
 
                     </div>
                     <a className="btn btn-ghost lg:text-2xl  flex items-center text-[#fcfbfb]"><span className="text-[#FF444A]"><GiTechnoHeart /></span>TechVibe </a>
-                    <div className=" hidden lg:flex">
+                </div>
+                <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 items-center">
                         {navlinks}
 
                     </ul>
                 </div>
-                </div>
-                
+
                 <div className="navbar-end">
-                    <Link to='/login'><button className="btn text-[#FF444A]">Login</button></Link>
-                   
+                    {
+                        user ? <button onClick={handlelogOut} className="btn text-[#FF444A]">Logout</button>
+                            :
+                            <Link to="/Login">
+                                <button className="btn text-[#FF444A]">Login</button>
+                            </Link>
+                    }
+
                 </div>
             </div>
         </div>
