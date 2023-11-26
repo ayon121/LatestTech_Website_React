@@ -8,6 +8,7 @@ import { AuthContext } from '../../../Providers/Authproviders';
 // react toast
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { axiosPublic } from '../../Hooks/useAxiosPublic';
 
 const Register = () => {
     const { createUser , GoogleLogin , UpdateProfile} = useContext(AuthContext)
@@ -24,11 +25,18 @@ const Register = () => {
         // create user
         createUser(email , password)
         .then(result => {
+            // send user info in the database
+            const userinfo = {
+                email : email, 
+                name : name,
+                userRole : 'user' ,
+                userType : 'nonPaid'
+            }
+            axiosPublic.post('/users' , userinfo)
+            .then(res => console.log(res.data))
+
             console.log(result)
             UpdateProfile(name , imgurl)
-            .then(result => {
-                console.log(result)
-            })
             .catch(error => {
                 toast(error.message)
             })
@@ -42,6 +50,14 @@ const Register = () => {
         GoogleLogin()
             .then(result => {
                 console.log(result)
+                const userinfo = {
+                    email : result.user?.email, 
+                    name : result.user?.displayName,
+                    userRole : 'user' ,
+                    userType : 'nonPaid'
+                }
+                axiosPublic.post('/users' , userinfo)
+                .then(res => console.log(res.data))
                 toast("Login Success")
                 navigate(location?.state ? location.state : '/')
 
