@@ -25,9 +25,10 @@ const AddProduct = () => {
         const total_upvote = 0
         const user_email = user?.email
         const user_img = user?.photoURL
+        const user_name = user?.displayName
         const status = 'pending'
 
-        const product = { product_name , product_img, tags , description , external_link , total_upvote , user_email , user_img , status }
+        const product = { product_name , product_img, tags , description , external_link , total_upvote , user_email , user_img , status , user_name }
         console.log(product);
         axiosSecure.post('/reviewproduct' , product)
         .then(res =>  {

@@ -1,15 +1,13 @@
-import { useState } from "react";
+
 import Title from "../../Shared/Title";
-import { axiosSecure } from "../../Hooks/useAxiosSecure";
+
 import ReviewProduct from "./ReviewProduct";
+import useReviewProducts from "../../Hooks/useReviewProducts";
 
 
 const ReviewProducts = () => {
-    const [reviewProucts , setReviewPRoducts] = useState()
-    axiosSecure.get('/reviewproduct')
-    .then(res => {
-        setReviewPRoducts(res.data)
-    })
+    const [ reviewProucts ] = useReviewProducts()
+
 
     return (
         <div>
