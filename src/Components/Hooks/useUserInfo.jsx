@@ -3,7 +3,7 @@ import useAxiosSecure from "./useAxiosSecure";
 
 const useUserInfo = () => {
     const axiosSecure = useAxiosSecure()
-    const {data: userInfo = [] } = useQuery({
+    const {data: userInfo = [] , refetch } = useQuery({
         queryKey: ['usersinfo'],
         queryFn: async () => {
             const res = await axiosSecure.get(`/users`)
@@ -11,7 +11,7 @@ const useUserInfo = () => {
         }
     })
     return (
-       [userInfo ]
+       [userInfo , refetch]
     );
 };
 
