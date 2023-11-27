@@ -20,16 +20,16 @@ const Layout = () => {
                         {
                             singleuserInfo[0]?.userRole === 'admin' && <div>
                                 <Link  to='/dashboard/users'><button className=' text-xs md:text-xl  font-bold text-white md:py-2  underline'>Manage Users</button></Link>
-                                <Link><button className=' text-xs md:text-xl font-bold text-white md:py-2  underline'>Review</button></Link>
+                                <Link to="/dashboard/reviewproduct"><button className=' text-xs md:text-xl font-bold text-white md:py-2  underline'>Review</button></Link>
                             </div>
                         }
                         {
                             singleuserInfo[0]?.userRole === 'modaretor' && <div>
-                                <Link><button className=' text-xs md:text-xl font-bold text-white md:py-2  underline'>Review</button></Link>
+                                <Link  to="/dashboard/reviewproduct"><button className=' text-xs md:text-xl font-bold text-white md:py-2  underline'>Review</button></Link>
                             </div>
                         }
                         <Link to='/dashboard/users'><button className=' text-xs md:text-xl  font-bold text-white md:py-2  underline'>Manage Users</button></Link>
-                        <Link><button className=' text-xs md:text-xl font-bold text-white md:py-2  underline'>Review</button></Link>
+                        <Link  to="/dashboard/reviewproduct"><button className=' text-xs md:text-xl font-bold text-white md:py-2  underline'>Review</button></Link>
                     </div>
                 </div>
                 <div className=' w-full md:w-4/5 px-3'>

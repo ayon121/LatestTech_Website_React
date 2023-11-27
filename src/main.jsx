@@ -27,6 +27,7 @@ import Dashboard from './Components/Pages/Dashboard/Dashboard';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import ManageUser from './Components/Pages/Dashboard/ManageUser';
 import AddProduct from './Components/Pages/Dashboard/AddProduct';
+import ReviewProducts from './Components/Pages/Dashboard/ReviewProducts';
 
 const queryClient = new QueryClient()
 
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
         path: '/dashboard/addproduct',
         element: <AddProduct></AddProduct>
       },
+      {
+        path :  '/dashboard/reviewproduct',
+        element : <ReviewProducts></ReviewProducts>
+      }
     ]
   }
 ]);
