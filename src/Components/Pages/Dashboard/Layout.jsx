@@ -13,7 +13,7 @@ const Layout = () => {
                 <div className='w-full md:w-1/5 border-2 px-3 py-3 h-auto my-4 bg-[#231f20] rounded-2xl md:rounded-r-2xl border-[#FF444A]'>
                     <div className='flex flex-row md:flex-col gap-2 text-center'>
                         <Link to="/dashboard"><button className='text-xs md:text-xl  font-bold text-white  md:py-2 underline'>Profile</button></Link>
-                        <Link><button className=' text-xs md:text-xl font-bold text-white md:py-2  underline'>My Products</button></Link>
+                        <Link to="/dashboard/myproducts"><button className=' text-xs md:text-xl font-bold text-white md:py-2  underline'>My Products</button></Link>
                         <Link to="/dashboard/addproduct"><button className=' text-xs md:text-xl  font-bold text-white md:py-2  underline'>Add Products</button></Link>
 
                         {/* admin and modator */}

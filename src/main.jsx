@@ -14,7 +14,7 @@ import Error from './Components/Pages/Error/Error';
 import Login from './Components/Pages/Login/Login';
 import Register from './Components/Pages/Register/Register';
 
-import MyProducts from './Components/Pages/MyProducts/MyProducts';
+
 import {
   QueryClient,
   QueryClientProvider,
@@ -28,6 +28,7 @@ import PrivateRoute from './PrivateRoute/PrivateRoute';
 import ManageUser from './Components/Pages/Dashboard/ManageUser';
 import AddProduct from './Components/Pages/Dashboard/AddProduct';
 import ReviewProducts from './Components/Pages/Dashboard/ReviewProducts';
+import MyProducts from './Components/Pages/Dashboard/MyProducts/MyProducts';
 
 const queryClient = new QueryClient()
 
@@ -53,10 +54,7 @@ const router = createBrowserRouter([
         path: '/register',
         element: <Register></Register>
       },
-      {
-        path: '/myproducts',
-        element: <MyProducts></MyProducts>
-      }
+      
     ]
   },
   {
@@ -78,6 +76,10 @@ const router = createBrowserRouter([
       {
         path :  '/dashboard/reviewproduct',
         element : <ReviewProducts></ReviewProducts>
+      },
+      {
+        path: '/dashboard/myproducts',
+        element: <MyProducts></MyProducts>
       }
     ]
   }
