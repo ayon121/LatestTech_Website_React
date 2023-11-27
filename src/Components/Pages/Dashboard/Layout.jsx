@@ -14,7 +14,7 @@ const Layout = () => {
                     <div className='flex flex-row md:flex-col gap-2 text-center'>
                         <Link to="/dashboard"><button className='text-xs md:text-xl  font-bold text-white  md:py-2 underline'>Profile</button></Link>
                         <Link><button className=' text-xs md:text-xl font-bold text-white md:py-2  underline'>My Products</button></Link>
-                        <Link><button className=' text-xs md:text-xl  font-bold text-white md:py-2  underline'>Add Products</button></Link>
+                        <Link to="/dashboard/addproduct"><button className=' text-xs md:text-xl  font-bold text-white md:py-2  underline'>Add Products</button></Link>
 
                         {/* admin and modator */}
                         {

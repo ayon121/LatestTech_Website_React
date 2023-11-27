@@ -13,8 +13,7 @@ import Error from './Components/Pages/Error/Error';
 
 import Login from './Components/Pages/Login/Login';
 import Register from './Components/Pages/Register/Register';
-import AddProduct from './Components/Pages/AddProduct/AddProduct';
-// import MyProduct from './Components/Pages/MyProducts/MyProduct';
+
 import MyProducts from './Components/Pages/MyProducts/MyProducts';
 import {
   QueryClient,
@@ -27,6 +26,7 @@ import Layout from './Components/Pages/Dashboard/Layout';
 import Dashboard from './Components/Pages/Dashboard/Dashboard';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import ManageUser from './Components/Pages/Dashboard/ManageUser';
+import AddProduct from './Components/Pages/Dashboard/AddProduct';
 
 const queryClient = new QueryClient()
 
@@ -53,10 +53,6 @@ const router = createBrowserRouter([
         element: <Register></Register>
       },
       {
-        path: '/addproduct',
-        element: <AddProduct></AddProduct>
-      },
-      {
         path: '/myproducts',
         element: <MyProducts></MyProducts>
       }
@@ -73,7 +69,11 @@ const router = createBrowserRouter([
       {
         path : '/dashboard/users' ,
         element : <ManageUser></ManageUser>
-      }
+      },
+      {
+        path: '/dashboard/addproduct',
+        element: <AddProduct></AddProduct>
+      },
     ]
   }
 ]);
