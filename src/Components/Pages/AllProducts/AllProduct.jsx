@@ -5,9 +5,10 @@ import useSingleUser from '../../Hooks/useSingleUser';
 import { axiosSecure } from '../../Hooks/useAxiosSecure';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
+import { Link } from 'react-router-dom';
 
 const AllProduct = ({allproduct}) => {
-    const {product_img , product_name , total_upvote , tags ,user_email , post_date } = allproduct
+    const {_id, product_img , product_name , total_upvote , tags ,user_email , post_date } = allproduct
     const [singleuserInfo] = useSingleUser()
     const handlemakeFeatured = () => {
         
@@ -41,6 +42,9 @@ const AllProduct = ({allproduct}) => {
                     <div>
                         <p>{total_upvote}upvotes</p>
                     </div>
+                </div>
+                <div>
+                    <Link to={`/product/${_id}`}><button className="btn">See Details</button></Link>
                 </div>
                <hr />
                 <div>

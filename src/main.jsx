@@ -30,6 +30,7 @@ import AddProduct from './Components/Pages/Dashboard/AddProduct';
 import ReviewProducts from './Components/Pages/Dashboard/ReviewProducts';
 import MyProducts from './Components/Pages/Dashboard/MyProducts/MyProducts';
 import Payment from './Components/Pages/Dashboard/Payment/Payment';
+import ProductDetails from './Components/Pages/ProductDetails/ProductDetails';
 
 const queryClient = new QueryClient()
 
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
         path: '/register',
         element: <Register></Register>
       },
+      {
+        path : '/product/:id',
+        element : <ProductDetails></ProductDetails>
+      }
       
     ]
   },
