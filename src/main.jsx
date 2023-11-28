@@ -29,6 +29,7 @@ import ManageUser from './Components/Pages/Dashboard/ManageUser';
 import AddProduct from './Components/Pages/Dashboard/AddProduct';
 import ReviewProducts from './Components/Pages/Dashboard/ReviewProducts';
 import MyProducts from './Components/Pages/Dashboard/MyProducts/MyProducts';
+import Payment from './Components/Pages/Dashboard/Payment/Payment';
 
 const queryClient = new QueryClient()
 
@@ -80,6 +81,10 @@ const router = createBrowserRouter([
       {
         path: '/dashboard/myproducts',
         element: <MyProducts></MyProducts>
+      },
+      {
+        path : '/dashboard/payment',
+        element :<PrivateRoute> <Payment></Payment></PrivateRoute>
       }
     ]
   }

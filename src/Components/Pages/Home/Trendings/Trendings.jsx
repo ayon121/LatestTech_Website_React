@@ -3,9 +3,13 @@ import { Link } from 'react-router-dom';
 import Title from '../../../Shared/Title';
 import Treanding from './Treanding';
 import { GiTechnoHeart } from "react-icons/gi";
+// import useAllProducts from '../../../Hooks/useAllProducts';
 
 const Trendings = () => {
+    // const [allproducts] = useAllProducts()
+    // console.log(allproducts.slice(0, 4));
     return (
+
         <div>
             <Title title={'Trending Products'}></Title>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto px-4 gap-4 mb-10">

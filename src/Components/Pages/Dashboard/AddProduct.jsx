@@ -5,11 +5,13 @@ import Title from "../../Shared/Title";
 import { axiosSecure } from "../../Hooks/useAxiosSecure";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
+import { useNavigate } from "react-router-dom";
 
 
 
 const AddProduct = () => {
     const { user } = useContext(AuthContext)
+    const navigate = useNavigate()
 
     const handdleAddProduct = e => {
         e.preventDefault()
@@ -34,6 +36,7 @@ const AddProduct = () => {
         .then(res =>  {
             if(res.data.insertedId){
                 toast('Product Added Successfuly')
+                navigate(`/dashboard/myproducts`)
             }
         })
 

@@ -2,7 +2,6 @@
 import PropTypes from 'prop-types';
 
 const MyProduct = ({product})=> {
-    console.log(product);
     const {product_name , total_upvote ,status  } = product
     
     return (

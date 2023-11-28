@@ -3,6 +3,7 @@ import Title from "../../Shared/Title";
 import { AuthContext } from "../../../Providers/Authproviders";
 
 import useSingleUser from "../../Hooks/useSingleUser";
+import { Link } from "react-router-dom";
 
 
 
@@ -32,7 +33,7 @@ const Dashboard = () => {
 
                         {
                             singleuserInfo[0]?.userType === 'nonPaid' && <div className="flex gap-2 items-center mb-4">
-                                <button className="btn text-[#FF444A]">Get Premium</button>
+                                <Link to="/dashboard/payment"><button className="btn text-[#FF444A]">Get Premium</button></Link>
                                 <h1>$10 per month</h1>
                             </div>
                         }
