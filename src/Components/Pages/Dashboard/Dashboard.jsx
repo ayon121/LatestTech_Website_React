@@ -38,6 +38,12 @@ const Dashboard = () => {
                             </div>
                         }
 
+                        {
+                            singleuserInfo[0]?.userType === 'Paid' && <div className="flex gap-2 items-center mb-4">
+                                <h1 className="text-2xl text-[#FF444A]">Verified User</h1>
+                            </div>
+                        }
+
 
                     </div>
                 </div>

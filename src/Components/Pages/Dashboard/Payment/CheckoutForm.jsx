@@ -4,15 +4,19 @@ import { axiosSecure } from "../../../Hooks/useAxiosSecure";
 import { AuthContext } from "../../../../Providers/Authproviders";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
+import { useNavigate } from "react-router-dom";
+import useSingleUser from "../../../Hooks/useSingleUser";
 
 
 const CheckoutForm = () => {
     const stripe = useStripe()
     const elements = useElements()
-    const totaPrice = 40
+    const totaPrice = 10
     const [clientSecret, SetclientSecret] = useState('')
     const { user} = useContext(AuthContext)
-
+    const [singleuserInfo] = useSingleUser()
+    const navigate = useNavigate()
+    console.log(singleuserInfo[0]._id);
     useEffect( ()=> {
         axiosSecure.post('/create-payment-intent' , {price : totaPrice})
         .then(res => {
@@ -63,6 +67,16 @@ const CheckoutForm = () => {
             console.log(paymentIntent);
             if(paymentIntent.status === 'succeeded'){
                 toast('Subscribed Successfully')
+                axiosSecure.patch(`/users/paid/${singleuserInfo[0]._id}`)
+                .then(res => {
+                    console.log(res.data.modifiedCount);
+                    navigate('/dashboard')
+                    
+                })
+                // navigate('/dashboard')
+
+
+
             }
         }
     }
