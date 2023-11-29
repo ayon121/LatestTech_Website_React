@@ -1,11 +1,11 @@
 
 import { useEffect, useState } from "react";
-import useAllProducts from "../../Hooks/useAllProducts";
+
 import Navbar from "../../Shared/Navbar";
 import Title from "../../Shared/Title";
 import AllProduct from "./AllProduct";
 import useProductCount from "../../Hooks/useProductCount";
-import { axiosPublic } from "../../Hooks/useAxiosPublic";
+
 
 
 
