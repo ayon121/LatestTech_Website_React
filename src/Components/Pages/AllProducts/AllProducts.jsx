@@ -1,11 +1,49 @@
+
+import { useEffect, useState } from "react";
 import useAllProducts from "../../Hooks/useAllProducts";
 import Navbar from "../../Shared/Navbar";
 import Title from "../../Shared/Title";
 import AllProduct from "./AllProduct";
+import useProductCount from "../../Hooks/useProductCount";
+import { axiosPublic } from "../../Hooks/useAxiosPublic";
+
+
 
 
 const AllProducts = () => {
-    const [allproducts] = useAllProducts()
+    // const [allproducts , refetch , currentPage , pages , SetcurrentPage] = useAllProducts()
+    const [allproducts , setAllProducts] = useState([])
+    const [currentPage , SetcurrentPage] = useState(0)
+    const itemsPerPage = 20
+    const [count] = useProductCount()
+    const Pagenumber = Math.ceil(count/ itemsPerPage)
+    const pages = [...Array(Pagenumber).keys()]
+    useEffect(() => {
+        fetch(`http://localhost:5000/allproducts?page=${currentPage}&size=${itemsPerPage}`)
+        .then(res => res.json())
+        .then(data => setAllProducts(data))
+    },[currentPage , itemsPerPage])
+    
+    
+    // const count = allproducts.length
+    // const itemsPerPage = 20
+    // const Pagenumber = Math.ceil(count/ itemsPerPage)
+    // const [currentPage , SetcurrentPage] = useState(0)
+    
+    // axiosPublic.get(`/myproducts`)
+    // .then(res =>{
+    //     console.log(res.data);
+    // })
+    
+    // const pages = []
+    // for(let i = 0; i < Pagenumber ; i++){
+    //     pages.push(i)
+    // }
+    // const pages = [...Array(Pagenumber).keys()]
+    
+
+
+
     
     return (
         <div>
@@ -21,6 +59,11 @@ const AllProducts = () => {
                     allproducts.map(allproduct => <AllProduct key={allproduct._id} allproduct={allproduct}></AllProduct>)
                 }
                 
+            </div>
+            <div className="max-w-5xl mx-auto px-3 text-center mb-8 ">
+                {
+                    pages.map((page , index) => <button onClick={()=> { SetcurrentPage(page); }} key={index} className={currentPage === page && 'btn btn-xs mx-2 text-white bg-[#FF444A]' || 'btn btn-xs mx-2 text-[#FF444A]  border-[#FF444A]'}>{page}</button>)
+                }
             </div>
 
         </div>

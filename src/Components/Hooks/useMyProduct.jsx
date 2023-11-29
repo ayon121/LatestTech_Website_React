@@ -5,7 +5,10 @@ import { AuthContext } from "../../Providers/Authproviders";
 
 
 const useMyProduct = () => {
-    const { user } = useContext(AuthContext)
+
+    const { user} = useContext(AuthContext)
+
+    
     const axiosSecure = useAxiosSecure()
     const {data: myproducts = [] , refetch } = useQuery({
         queryKey: ['myproducts'],
@@ -14,6 +17,7 @@ const useMyProduct = () => {
             return res.data
         }
     })
+    
     return (
        [myproducts , refetch]
     );

@@ -8,13 +8,14 @@ import 'react-toastify/dist/ReactToastify.css'
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../../Providers/Authproviders';
-import useAllProducts from '../../Hooks/useAllProducts';
+
 
 const AllProduct = ({allproduct}) => {
+    
     const {_id, product_img , product_name , total_upvote , tags ,user_email , post_date } = allproduct
     const [singleuserInfo] = useSingleUser()
     const { user} = useContext(AuthContext)
-    const [, refetch] = useAllProducts()
+
     const handlemakeFeatured = () => {
         
         const addfeatured = {
@@ -36,7 +37,7 @@ const AllProduct = ({allproduct}) => {
         .then(res => {
             if(res.data.modifiedCount > 0){
                 toast('Upvoted')
-                refetch()
+    
             }
         })
     }

@@ -13,7 +13,7 @@ const Authproviders = ({ children }) => {
     const auth = getAuth(app);
     const [user, setuser] = useState(null)
     const [loading, setloading] = useState(true)
-
+   
     useEffect(() => {
         const Unsubscribe = onAuthStateChanged(auth, currentUser => {
             console.log('user in auth state changes', currentUser)
@@ -57,6 +57,7 @@ const Authproviders = ({ children }) => {
     }
 
    
+   
 
 
     const authInfo = {
@@ -66,7 +67,8 @@ const Authproviders = ({ children }) => {
         logout,
         loading ,
         GoogleLogin ,
-        UpdateProfile
+        UpdateProfile ,
+        
     }
 
     return (
