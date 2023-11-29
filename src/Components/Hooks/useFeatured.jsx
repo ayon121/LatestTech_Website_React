@@ -5,7 +5,7 @@ import useAxiosPublic from "./useAxiosPublic";
 const useFeatured = () => {
     //tan stack
     const axiosPublic = useAxiosPublic()
-    const {data: featured = [] } = useQuery({
+    const {data: featured = [] , refetch} = useQuery({
                 queryKey: ['bookings'],
                 queryFn: async () => {
                     const res = await axiosPublic.get(`/featured`)
@@ -13,7 +13,7 @@ const useFeatured = () => {
                 }
             })
     
-    return [featured]
+    return [featured , refetch]
 };
 
 export default useFeatured;

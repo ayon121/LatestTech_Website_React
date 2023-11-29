@@ -15,7 +15,6 @@ const Treanding = () => {
                 <div className="card-actions justify-start items-center pt-2 pb-2 ">
                     <div className='flex items-center border-2 px-2 py-1 rounded-xl border-[#FF444A]'> 
                         <button className="text-xl "><BiSolidUpvote /></button>
-                        <button className="text-xl"><BiSolidDownvote /></button>
                     </div>
                     <div>
                         <p>45 upvotes</p>

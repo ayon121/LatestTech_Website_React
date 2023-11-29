@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import  { useState } from 'react';
+import {  useParams } from 'react-router-dom';
 import { axiosPublic } from '../../Hooks/useAxiosPublic';
 import Title from '../../Shared/Title';
 import Navbar from '../../Shared/Navbar';
