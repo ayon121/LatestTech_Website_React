@@ -31,6 +31,7 @@ import ReviewProducts from './Components/Pages/Dashboard/ReviewProducts';
 import MyProducts from './Components/Pages/Dashboard/MyProducts/MyProducts';
 import Payment from './Components/Pages/Dashboard/Payment/Payment';
 import ProductDetails from './Components/Pages/ProductDetails/ProductDetails';
+import AddReviews from './Components/Pages/Reviews/AddReviews';
 
 const queryClient = new QueryClient()
 
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
       {
         path : '/product/:id',
         element : <ProductDetails></ProductDetails>
+      },
+      {
+        path : '/addreview/:id',
+        element : <AddReviews></AddReviews>
       }
       
     ]

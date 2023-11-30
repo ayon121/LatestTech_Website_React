@@ -58,8 +58,9 @@ const AllProduct = ({allproduct}) => {
                         <p>{total_upvote}upvotes</p>
                     </div>
                 </div>
-                <div>
+                <div  className="flex gap-2 mx-1">
                     <Link to={`/product/${_id}`}><button className="btn btn-sm">See Details</button></Link>
+                    <Link to={`/addreview/${_id}`}><button className="btn btn-sm">Add Review</button></Link>
                 </div>
                <hr />
                 <div>
