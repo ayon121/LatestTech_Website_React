@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 
 const ProductReview = ({reviews}) => {
-    console.log(reviews);
+    
     const {name , review , ratings} = reviews
     return (
         <div className='px-3 py-2 border-4 border-red-600'>

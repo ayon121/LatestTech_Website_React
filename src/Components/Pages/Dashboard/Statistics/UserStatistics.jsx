@@ -5,7 +5,7 @@ import useMyProduct from '../../../Hooks/useMyProduct';
 const UserStatistics = () => {
     
     const [myproducts] = useMyProduct()
-    const userproduct = myproducts.length
+    const userproduct = myproducts?.length
     const totalpostlimit =  20
 
     const data = [

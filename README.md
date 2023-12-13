@@ -16,6 +16,8 @@
     5. User Friendly <br>
     6. Meterial UI Used(learning process)(basic) <br>
     7. Payment System (stripe)
+    8. Tywriting Animation in  Banner(Unique)
+    9. Post limit Statistic For user in DashBoard(Unique)
 </p>
 <hr>
 <h1>

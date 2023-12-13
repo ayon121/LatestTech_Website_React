@@ -6,8 +6,10 @@ import Navbar from '../../Shared/Navbar';
 import Footer from '../../Shared/Footer';
 import { axiosSecure } from '../../Hooks/useAxiosSecure';
 import ProductReview from './ProductReview';
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 const ProductDetails = () => {
+    
     const {id} = useParams()
     const [product , Setproduct] = useState([])
     const [productReview , SetproductReview] = useState([])
@@ -19,6 +21,8 @@ const ProductDetails = () => {
     })
 
     const {description ,external_link ,total_upvote,user_email , product_img, product_name   } = product
+    
+    
 
     axiosSecure.get(`/addproductreview/${id}`)
     .then(res => SetproductReview(res.data))
