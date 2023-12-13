@@ -19,7 +19,7 @@ const AllProducts = () => {
     const Pagenumber = Math.ceil(count/ itemsPerPage)
     const pages = [...Array(Pagenumber).keys()]
     useEffect(() => {
-        fetch(`http://localhost:5000/allproducts?page=${currentPage}&size=${itemsPerPage}`)
+        fetch(`https://tect-product-serverside.vercel.app/allproducts?page=${currentPage}&size=${itemsPerPage}`)
         .then(res => res.json())
         .then(data => setAllProducts(data))
     },[currentPage , itemsPerPage])

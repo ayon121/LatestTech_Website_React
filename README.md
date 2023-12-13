@@ -24,7 +24,7 @@
     Live Link
 </h1>
 <p>
-    Visit Now : <a href="https://tech-product-f57cc.web.app/">Tech Vibe</a><br>
+    Visit Now : <a href="https://tect-product-serverside.vercel.app/">Tech Vibe</a><br>
     Server Repo : <a href="https://github.com/ayon121/LatestTech_Website_Server_Node.git">Server Code</a>
 </p>
 <hr>

@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 export const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000'
+    baseURL: 'https://tect-product-serverside.vercel.app'
 })
 
 const useAxiosSecure = () => {
