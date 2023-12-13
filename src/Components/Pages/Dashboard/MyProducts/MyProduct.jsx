@@ -11,7 +11,7 @@ const MyProduct = ({product})=> {
     return (
         <div className="card card-compact w-auto border-2 border-[#FF444A] bg-base-100 shadow-xl font-inter">
             <div className="card-body">
-                <h2 className="card-title"></h2>
+                <h2 className="card-title">{product_name}</h2>
                 <p className=''>Total Vote : {total_upvote}</p>
                 <p className=''>Status : {status}</p>
                 <div className="card-actions justify-start items-center pt-2 pb-2 ">

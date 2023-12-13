@@ -15,6 +15,7 @@ const Layout = () => {
                         <Link to="/dashboard"><button className='text-xs md:text-xl  font-bold text-white  md:py-2 underline'>Profile</button></Link>
                         <Link to="/dashboard/myproducts"><button className=' text-xs md:text-xl font-bold text-white md:py-2  underline'>My Products</button></Link>
                         <Link to="/dashboard/addproduct"><button className=' text-xs md:text-xl  font-bold text-white md:py-2  underline'>Add Products</button></Link>
+                        <Link to="/dashboard/statistics"><button className=' text-xs md:text-xl  font-bold text-white md:py-2  underline'>Post Statistics</button></Link>
 
                         {/* admin and modator */}
                         {
