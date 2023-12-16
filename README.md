@@ -9,15 +9,35 @@
     Features
 </h1>
 <p>
-    1. Responsive <br>
-    2. Login with Email & Password <br>
-    3. Social Login(Google) <br>
-    4. Database(mongodb) <br>
-    5. User Friendly <br>
-    6. Meterial UI Used(learning process)(basic) <br>
-    7. Payment System (stripe)
-    8. Tywriting Animation in  Banner(Unique)
-    9. Post limit Statistic For user in DashBoard(Unique)
+   Seamless Responsiveness:
+Crafted an intuitively responsive design ensuring an impeccable user experience across diverse devices and screen sizes.
+
+Secure Login System:
+Implemented a robust login mechanism with email and password authentication, prioritizing user data security.
+
+Effortless Social Connectivity:
+Incorporated seamless Google social login functionality, enhancing user onboarding and connectivity.
+
+Dynamic Database Management:
+Leveraged MongoDB to create a dynamic and scalable database, ensuring efficient data storage and retrieval.
+
+User-Centric Interface:
+Engineered a user-friendly interface to facilitate easy navigation and a delightful user journey.
+
+Stylish Material UI Integration:
+Embarked on a learning process to integrate Material UI, infusing modern aesthetics and enhancing visual appeal.
+
+Secure Payment Gateway:
+Integrated Stripe for a secure and streamlined payment system, ensuring smooth transactions and user trust.
+
+Unique Typewriting Animation:
+Infused creativity into the banner with a captivating typewriting animation, setting the website apart with a unique visual element.
+
+User Empowerment with Statistics:
+Pioneered a post limit statistic feature in the user dashboard, empowering users with insights into their content contributions.
+
+Administrative Post Approval:
+Implemented an admin feature enabling the approval of pending posts, ensuring content quality and adherence to guidelines.
 </p>
 <hr>
 <h1>
